@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="indium.indiumxpdfeditor.IndiuMXPDFEditor" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Indiu MXPDFEditor</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="fileDocOptions" type="datasource" isList="true" required="false">
+                <caption>Selectable FileDocuments</caption>
+                <description>Datasource providing FileDocument objects to choose from for input/output</description>
+            </property>
+            <property key="inputFile" type="association" required="false" selectableObjects="fileDocOptions">
+                <caption>Input PDF</caption>
+                <description>Association to a FileDocument representing the input PDF to process</description>
+                <associationTypes>
+                    <associationType name="Reference" />
+                </associationTypes>
+            </property>
+            <property key="outputFile" type="association" required="false" selectableObjects="fileDocOptions">
+                <caption>Output PDF</caption>
+                <description>Association to a FileDocument where the processed PDF will be stored</description>
+                <associationTypes>
+                    <associationType name="Reference" />
+                </associationTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
